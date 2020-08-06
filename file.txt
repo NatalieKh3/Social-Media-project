@@ -1,0 +1,59 @@
+python -m venv venv
+venv\scripts\activate
+pip install django
+
+#startproject
+django-admin startproject mysite .
+python manage.py migrate
+python manage.py createsuperuser
+
+#create app
+python manage.py startapp blog
+
+#run app
+python manage.py runserver
+
+/blog/ -> home.html
+
+
+
+
+
+
+#github create
+echo "# DjangoWebSiteTest" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/kirigaikabuto/DjangoWebSiteTest.git
+git push -u origin master
+
+#.gitignore
+*.pyc
+*~
+__pycache__
+venv
+db.sqlite3
+/static
+.DS_Store
+
+#update github
+git add .
+git commit -m "add new elements"
+git push
+
+
+#pythonanywhere
+pip3.6 install --user pythonanywhere
+
+
+    #prepare the list of libs from django app (venv)
+    pip freeze > requirements.txt
+
+    #update github
+    git add .
+    git commit -m "add new elements"
+    git push
+
+
+pa_autoconfigure_django.py https://github.com/kirigaikabuto/DjangoWebSiteTest.git

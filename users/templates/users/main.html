@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    {%if request.user.is_authenticated%}
+    {{request.user.username}}
+    <a href="{%url 'profile_page' %}">Profile</a>
+    <a href="{%url 'user_logout' %}">Logout</a>
+    {%else%}
+    <a href="{%url 'login_page'%}">Log in</a>
+    <a href="{%url 'register_page'%}">Registration</a>
+    {%endif%} <br>
+
+    
+</body>
+</html>
